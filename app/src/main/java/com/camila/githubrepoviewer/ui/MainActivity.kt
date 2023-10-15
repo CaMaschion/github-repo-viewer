@@ -1,7 +1,8 @@
-package com.camila.githubrepoviewer
+package com.camila.githubrepoviewer.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.camila.githubrepoviewer.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
