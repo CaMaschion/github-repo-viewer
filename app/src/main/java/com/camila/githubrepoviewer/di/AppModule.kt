@@ -22,10 +22,8 @@ object AppModule {
     fun providesGithubApi(
     ): GithubApi {
         return Retrofit.Builder()
-            .baseUrl("http://api.github.com")
-            .addConverterFactory(
-                GsonConverterFactory.create(GsonBuilder().create())
-            )
+            .baseUrl("https://api.github.com")
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(GithubApi::class.java)
     }
