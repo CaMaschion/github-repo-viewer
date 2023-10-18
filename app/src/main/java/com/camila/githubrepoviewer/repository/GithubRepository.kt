@@ -8,10 +8,15 @@ interface GithubRepository {
     suspend fun getRepositories(): GithubRepositories
 }
 
-class GithubRepositoryImpl @Inject constructor(private val githubApi: GithubApi
+class GithubRepositoryImpl @Inject constructor(private val service: GithubApi
 ) : GithubRepository {
 
     override suspend fun getRepositories() : GithubRepositories {
-        return githubApi.getRepositories(1)
+        return try {
+            service.getRepositories()
+        } catch (exception: Exception) {
+            throw exception
+        }
     }
+
 }
