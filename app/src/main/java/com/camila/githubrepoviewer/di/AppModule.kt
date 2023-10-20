@@ -3,7 +3,6 @@ package com.camila.githubrepoviewer.di
 import com.camila.githubrepoviewer.repository.GithubRepository
 import com.camila.githubrepoviewer.repository.GithubRepositoryImpl
 import com.camila.githubrepoviewer.service.GithubApi
-import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -10,13 +10,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class GitHubRepoViewModel @Inject constructor(
-    private val githubRepo: GithubRepository
+    private val repository: GithubRepository
 ): ViewModel() {
 
    fun getRepositoriesFromGithub()
     {
         viewModelScope.launch(Dispatchers.IO) {
-            githubRepo.getRepositories()
+            repository.getRepositories()
         }
     }
 

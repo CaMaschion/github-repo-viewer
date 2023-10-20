@@ -3,9 +3,7 @@ package com.camila.githubrepoviewer.model
 import com.google.gson.annotations.SerializedName
 
 data class GithubRepositories(
-
-    @SerializedName("item") val item: List<GithubItem>
-
+    @SerializedName("items") val items: List<GithubItem>
 )
 
 data class GithubItem(
