@@ -9,12 +9,12 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    val viewModel: GitHubRepoViewModel by viewModels()
+    val viewModel: RepositoryViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.fragment_row)
 
         viewModel.loadRepositories()
     }

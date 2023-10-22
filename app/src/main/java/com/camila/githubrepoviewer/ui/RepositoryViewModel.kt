@@ -12,11 +12,13 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class GitHubRepoViewModel @Inject constructor(
+class RepositoryViewModel @Inject constructor(
     private val repository: GithubRepository
 ) : ViewModel() {
 
     private val _repositories = MutableLiveData<List<RepositoryModel>>()
+    val repositories: LiveData<List<RepositoryModel>>
+        get() = _repositories
 
     fun loadRepositories() {
         viewModelScope.launch(Dispatchers.IO) {
@@ -25,11 +27,11 @@ class GitHubRepoViewModel @Inject constructor(
         }
     }
 
-    fun returnToTopScreen(){
+    fun returnToTopScreen() {
         //TODO
     }
 
-    fun openRepositoryDetail(){
+    fun openRepositoryDetail() {
         //TODO
     }
 
