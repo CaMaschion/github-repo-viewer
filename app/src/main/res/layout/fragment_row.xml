@@ -1,48 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/githubList"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:maxHeight="280dp"
-    android:orientation="horizontal">
+    android:layout_height="100dp"
+    android:layout_margin="@dimen/dimen_24"
+    app:cardBackgroundColor="?colorSurface"
+    app:strokeColor="?colorOnSurface"
+    app:strokeWidth="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="100dp"
-            android:maxHeight="110dp"
-            android:minWidth="100dp"
-            android:minHeight="110dp"
-            android:paddingStart="1dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_github"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="@dimen/dimen_70"
+            android:contentDescription="@string/img_text_repo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="TODO" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_repository"
-            android:layout_width="85dp"
-            android:layout_height="15dp"
-            android:text="Repositório:"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRepository"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?colorOnSurface"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/avatar"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/img_github"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Repository name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
