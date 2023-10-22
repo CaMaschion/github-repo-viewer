@@ -29,7 +29,7 @@ class RepositoryAdapter(
     inner class GithubViewHolder(binding: FragmentRowBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        private val avatar = binding.avatar
+        private val avatar = binding.imgGithub
         private val repositoryName = binding.tvRepository
 
         fun bindItem(item: RepositoryModel) {
