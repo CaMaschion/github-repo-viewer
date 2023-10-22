@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph.xml">
+    android:id="@+id/nav_graph.xml"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/recyclerViewFragment">
+
+    <fragment
+        android:id="@+id/recyclerViewFragment"
+        android:name="com.camila.githubrepoviewer.ui.RecycleViewFragment"
+        android:label="RecyclerViewFragment"
+        tools:layout="@layout/recycler_view_repositories">
+        <action
+            android:id="@+id/action_recyclerViewFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.camila.githubrepoviewer.ui.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail"/>
 
 </navigation>

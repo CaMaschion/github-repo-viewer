@@ -7,15 +7,13 @@ import com.camila.githubrepoviewer.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
 
-    val viewModel: RepositoryViewModel by viewModels()
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_row)
+        setContentView(R.layout.activity_main)
 
-        viewModel.loadRepositories()
     }
 }
