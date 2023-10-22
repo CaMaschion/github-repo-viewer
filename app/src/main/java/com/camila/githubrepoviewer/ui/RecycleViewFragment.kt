@@ -5,14 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.camila.githubrepoviewer.adapter.RepositoryAdapter
 import com.camila.githubrepoviewer.databinding.RecyclerViewRepositoriesBinding
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.WithFragmentBindings
 
-class RowFragment : Fragment() {
+@AndroidEntryPoint
+class RecycleViewFragment : Fragment() {
 
-    private lateinit var viewModel: RepositoryViewModel
+    private val viewModel: RepositoryViewModel by viewModels()
     private lateinit var binding: RecyclerViewRepositoriesBinding
     private lateinit var recycler: RecyclerView
 
