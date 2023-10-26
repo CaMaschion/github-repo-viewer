@@ -27,13 +27,4 @@ class RepositoryViewModel @Inject constructor(
         }
     }
 
-    fun returnToTopScreen() {
-        //TODO
-    }
-
-    fun openRepositoryDetail() {
-        //TODO
-    }
-
-
 }
